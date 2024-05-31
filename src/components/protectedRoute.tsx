@@ -5,9 +5,9 @@ type ProtectedRouteProps = PropsWithChildren
 const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
-  console.log(token)
   if (!token) {
-    navigate("/login", { replace: true })
+    navigate("/login")
+    return;
   }
   return (
     <>
