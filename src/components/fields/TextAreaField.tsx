@@ -1,5 +1,3 @@
-"use client";
-
 import {
   ElementsType,
   FormElement,
@@ -85,7 +83,7 @@ function DesignerComponent({
   elementInstance: FormElementInstance;
 }) {
   const element = elementInstance as CustomInstance;
-  const { label, required, placeHolder, helperText, rows } =
+  const { label, required, placeHolder, helperText } =
     element.extraAttributes;
   return (
     <div className="flex flex-col gap-2 w-full">

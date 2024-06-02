@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from "react";
+import { useState } from "react";
 import DesignerSidebar from "./designerSidebar";
 import {
   DragEndEvent,
@@ -10,15 +10,12 @@ import { cn } from "@/lib/utils";
 import useDesigner from "@/hooks/useDesigner";
 import {
   ElementsType,
-  FormElement,
   FormElementInstance,
   FormElements,
 } from "../fields/FormElement";
 import { idGenerator } from "@/helpers/helpers";
 import { Button } from "../ui/button";
 import { Trash } from "lucide-react";
-import { SortableContext, useSortable } from "@dnd-kit/sortable";
-import { CSS } from "@dnd-kit/utilities";
 
 const designer = () => {
   const {
@@ -149,7 +146,7 @@ const DesignerElementWrapper = ({
 }: {
   element: FormElementInstance;
 }) => {
-  const { removeElement, selectedElement, setSelectedElement } = useDesigner();
+  const { removeElement, setSelectedElement } = useDesigner();
   const [mouseIsOver, setMouseIsOver] = useState(false);
   const topHalf = useDroppable({
     id: element.id + "-top",

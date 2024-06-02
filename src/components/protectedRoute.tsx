@@ -1,4 +1,4 @@
-import { PropsWithChildren, ReactNode } from "react";
+import { PropsWithChildren } from "react";
 import { useNavigate } from "react-router-dom";
 
 type ProtectedRouteProps = PropsWithChildren

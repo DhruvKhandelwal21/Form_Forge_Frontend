@@ -1,4 +1,3 @@
-import useAxiosInstance from "@/hooks/useAxiosInstance";
 import { ReactNode, createContext, useState } from "react";
 
 type User = {

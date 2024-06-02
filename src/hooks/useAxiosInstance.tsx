@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useRef } from "react";
-import { useNavigate, useLocation, Navigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const useAxiosInstance = (passedHeaders = null) => {
   let headers: any = passedHeaders ? passedHeaders : {};
@@ -38,7 +38,7 @@ const useAxiosInstance = (passedHeaders = null) => {
 
   axiosInstance.interceptors.response.use(
     (response) =>
-      new Promise((resolve, reject) => {
+      new Promise((resolve) => {
         resolve(response);
       }),
     (error) => {

@@ -1,4 +1,4 @@
-import { ElementsType, FormElement, FormElementInstance } from "./FormElement";
+import { ElementsType, FormElement } from "./FormElement";
 import { Label } from "../ui/label";
 
 import { Minus } from "lucide-react";
@@ -23,11 +23,7 @@ export const SeparatorFieldFormElement: FormElement = {
   validate: () => true,
 };
 
-function DesignerComponent({
-  elementInstance,
-}: {
-  elementInstance: FormElementInstance;
-}) {
+function DesignerComponent() {
   return (
     <div className="flex flex-col gap-2 w-full">
       <Label className="text-muted-foreground">Separator field</Label>
@@ -36,18 +32,10 @@ function DesignerComponent({
   );
 }
 
-function FormComponent({
-  elementInstance,
-}: {
-  elementInstance: FormElementInstance;
-}) {
+function FormComponent() {
   return <Separator />;
 }
 
-function PropertiesComponent({
-  elementInstance,
-}: {
-  elementInstance: FormElementInstance;
-}) {
+function PropertiesComponent() {
   return <p>No properties for this element</p>;
 }

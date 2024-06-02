@@ -1,12 +1,9 @@
 import {
   Active,
-  DragEndEvent,
   DragOverlay,
   useDndMonitor,
-  useDraggable,
 } from "@dnd-kit/core";
-import { ElementsType, FormElement, FormElements } from "../fields/FormElement";
-import { Button } from "../ui/button";
+import { ElementsType, FormElements } from "../fields/FormElement";
 import { useState } from "react";
 import { SidebarBtnElementDragOverlay } from "./sidebarBtnElement";
 import useDesigner from "@/hooks/useDesigner";

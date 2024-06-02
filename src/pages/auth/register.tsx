@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Boxes, LoaderCircle } from "lucide-react";
 import formImg from "../../assets/formImg.webp"
 import useAxiosInstance from "@/hooks/useAxiosInstance";
+import { toast } from "@/components/ui/use-toast";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -49,19 +50,17 @@ const Register = () => {
 
     axiosInstance
       .post(`${import.meta.env.VITE_APP_API_URL}/user/register`, values)
-      .then((response) => {
+      .then(() => {
         setIsSubmitting(false);
-        const { data } = response;
-        console.log(data);
-        // localStorage.setItem("token", data?.newUser?.token);
-        // localStorage.setItem("userName", data?.newUser?.userName);
-
-        // setToken(data?.newUser?.token);
-        // myUserName(data?.newUser?.userName);
         navigate("/login");
       })
-      .catch((err) => {
+      .catch(() => {
         setIsSubmitting(false);
+        toast({
+          title: "Error",
+          variant: "destructive",
+          description: "Something went wrong please try again",
+        });
       });
   };
 

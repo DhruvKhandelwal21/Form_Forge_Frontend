@@ -19,7 +19,7 @@ const SubmissionsTable = ({ formData }) => {
   const [allColumns, setAllColumns] = useState([]);
   const { axiosInstance } = useAxiosInstance();
   useEffect(() => {
-    fetchSubmissions();
+    if(formData) fetchSubmissions();
   }, [formData]);
 
   useEffect(()=>{
