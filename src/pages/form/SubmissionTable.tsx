@@ -12,13 +12,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import useAxiosInstance from "@/hooks/useAxiosInstance";
 import { toast } from "@/components/ui/use-toast";
 import { Skeleton } from "@/components/ui/skeleton";
-import { RefreshCcw } from "lucide-react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 
 const SubmissionsTable = ({ formData }) => {
   const [allSubmissions, setAllSubmissions] = useState([]);

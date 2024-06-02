@@ -1,4 +1,3 @@
-import axiosInstance from "@/hooks/useAxiosInstance";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -18,7 +17,6 @@ import useAxiosInstance from "@/hooks/useAxiosInstance";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const publishFormBtn = ({ id, disabled, toolTip }) => {
-  console.log(disabled)
   const [loading, setLoading] = useState(false);
   const {axiosInstance} = useAxiosInstance();
   async function publishForm() {
@@ -29,8 +27,7 @@ const publishFormBtn = ({ id, disabled, toolTip }) => {
     setLoading(true);
     await axiosInstance
       .put(`form`, values)
-      .then(({ data: { data } }) => {
-        console.log('hello')
+      .then(() => {
         setLoading(false);
         toast({
           title: "Success",
@@ -38,7 +35,7 @@ const publishFormBtn = ({ id, disabled, toolTip }) => {
         });
         window.location.reload();
       })
-      .catch((e) => {
+      .catch(() => {
         setLoading(false);
         toast({
           title: "Error",

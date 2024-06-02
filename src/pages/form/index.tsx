@@ -1,16 +1,11 @@
 import { useEffect, useState } from "react";
-import { StatsCard } from "@/components/statsCards/statCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
 import {
   ExternalLink,
   LoaderCircle,
-  MousePointerClick,
   RefreshCcw,
-  Split,
-  SquareGanttChart,
-  View,
 } from "lucide-react";
 import { useParams } from "react-router-dom";
 import SubmissionsTable from "./SubmissionTable";

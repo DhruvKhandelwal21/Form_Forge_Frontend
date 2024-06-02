@@ -78,7 +78,7 @@ const Submit = () => {
     const jsonContent = JSON.stringify(formValues.current);
     await axiosInstance
       .post(`/submit`, { data: jsonContent, formId: formData?._id })
-      .then((res) => {
+      .then(() => {
         setSubmitting(false);
         setSuccessFullSubmit(true);
         window.history.pushState(null, "", window.location.href);

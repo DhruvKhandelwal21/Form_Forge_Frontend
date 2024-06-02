@@ -2,7 +2,6 @@ import { FormElements } from "@/components/fields/FormElement";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import useDesigner from "@/hooks/useDesigner";
-import React from "react";
 
 const PreviewDialogBtn = () => {
   const { elements } = useDesigner();
